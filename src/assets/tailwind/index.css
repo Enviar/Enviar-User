@@ -1,3 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Raleway", sans-serif;
+  /* border: 1px solid red; */
+}
+
+.jumbotron {
+  background: url("/public/images/header-img-2.jpg") no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 666px;
+}
+
+.tracking {
+  /* background-color: #f9f9f9; */
+  background-size: 100px;
+  background: url("/public/images/track-bg.svg") #f9f9f9 center 70% no-repeat;
+  height: 885px;
+}
+
+.track-bg {
+  position: absolute;
+  z-index: -1;
+  width: 1217px;
+  margin: auto;
+}
+
+.track-input {
+  width: 811px;
+  height: 50px;
+}
+
+.track-input::placeholder {
+  color: #000000a6;
+  font-weight: 600;
+}
+
+.track-button {
+  width: 406px;
+  height: 50px;
+  background-color: #809500;
+}
+
+.header-text {
+  line-height: 80px;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+  margin: auto;
+  /* max-width: 1440px; */
+}
+
+.footer h3 {
+  color: #809500;
+}
+
+.footer p {
+  color: #353535;
+}
