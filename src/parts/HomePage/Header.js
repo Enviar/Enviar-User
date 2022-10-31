@@ -12,7 +12,7 @@ export default function Header() {
             Deliver Your <br /> Goods. <br /> With No Worries.
           </h1>
           <div className="pt-7">
-            <Button btn_text="Check Our Prices" />
+            <Button btn_text="Check Our Prices" btn_destination="/" />
           </div>
         </div>
       </div>

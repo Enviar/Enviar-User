@@ -1,15 +1,44 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
+const links = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "Services",
+    url: "/services",
+  },
+  {
+    name: "About",
+    url: "/about",
+  },
+  {
+    name: "Price",
+    url: "/price",
+  },
+];
 
 export default function Navbar() {
   return (
-    <nav>
+    <div className="flex justify-between items-center h-32 px-25">
       <img src="/images/enviar-logo.png" alt="" width={176} />
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </nav>
+      <nav className="flex font-semibold text-lg">
+        {links.map((link) => {
+          return (
+            <NavLink
+              to={link.url}
+              className="pr-6 pl-6 hover:px-6 pb-3 pt-4 hover:bg-btn-hover duration-200 hover:rounded-md"
+              style={({ isActive }) =>
+                isActive ? { fontWeight: "bold" } : { fontWeight: "inherit" }
+              }
+            >
+              {link.name}
+            </NavLink>
+          );
+        })}
+      </nav>
+    </div>
   );
 }
