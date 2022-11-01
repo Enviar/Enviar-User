@@ -47,7 +47,7 @@ export default function TrackPackage() {
           <br />
           <button
             onClick={(e) => getResi(e)}
-            className="track-button font-semibold text-white rounded-lg mt-20 tracking-wide"
+            className="track-button font-semibold text-white rounded-lg mt-20 tracking-wide bg-primary-green"
           >
             Track
           </button>
