@@ -44,6 +44,7 @@ export default function Service() {
               width={623}
               height={400}
               className="rounded-img"
+              alt=""
             />
           </div>
         ) : (
@@ -53,6 +54,7 @@ export default function Service() {
               width={623}
               height={400}
               className="rounded-img"
+              alt=""
             />
             <div className="block">
               <h1 className="text-5xl text-dark-grey font-bold">

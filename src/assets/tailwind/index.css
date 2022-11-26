@@ -33,6 +33,7 @@
 .track-input {
   width: 811px;
   height: 50px;
+  font-weight: 600;
 }
 
 .track-input::placeholder {
@@ -54,10 +55,6 @@
   margin: auto;
 }
 
-.footer p {
-  color: #353535;
-}
-
 .active::after {
   text-align: center;
   /* position: absolute; */
@@ -68,4 +65,45 @@
   height: 5px;
   background-color: #809500;
   content: "\00a0";
+}
+
+input {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.react-datalist-input__textbox {
+  width: 350px;
+  height: 50px;
+  border-radius: 6px;
+  padding: 16px;
+  background-color: #E2E2E2;
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.react-datalist-input__listbox-option {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.react-datalist-input__listbox-option:hover {
+  background-color: #dfdfdf;
+}
+
+
+.react-datalist-input__listbox {
+  text-align: left;
+  height: 100px;
+  overflow: auto;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid grey;
+  position: absolute;
+  width: 350px;
 }
