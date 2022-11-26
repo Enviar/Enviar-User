@@ -12,7 +12,7 @@ export default function TrackPackage() {
     // console.log(resi);
     try {
       const response = await axios.get(
-        `http://localhost:3000/statusReceipt/${resi}`
+        `https://enviar-be.herokuapp.com/statusReceipt/${resi}`
       );
       setStatus(response.data.data);
       setDestination(response.data.destinationCity);

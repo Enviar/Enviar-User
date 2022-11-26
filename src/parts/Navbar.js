@@ -5,18 +5,22 @@ const links = [
   {
     name: "Home",
     url: "/",
+    key: 1,
   },
   {
     name: "Services",
     url: "/services",
+    key: 2,
   },
   {
     name: "About",
     url: "/about",
+    key: 3,
   },
   {
     name: "Price",
     url: "/price",
+    key: 4,
   },
 ];
 
@@ -24,10 +28,11 @@ export default function Navbar() {
   return (
     <div className="flex justify-between items-center h-32 px-25">
       <img src="/images/enviar-logo.png" alt="" width={176} />
-      <nav className="flex font-semibold text-lg">
+      <div className="flex font-semibold text-lg">
         {links.map((link) => {
           return (
             <NavLink
+              key={link.key}
               to={link.url}
               className="pr-6 pl-6 hover:px-6 pb-3 pt-4 hover:bg-btn-hover duration-200 hover:rounded-md"
               style={({ isActive }) =>
@@ -38,7 +43,7 @@ export default function Navbar() {
             </NavLink>
           );
         })}
-      </nav>
+      </div>
     </div>
   );
 }
