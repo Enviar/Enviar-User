@@ -3,25 +3,25 @@ import React from "react";
 const services = [
   {
     key: 1,
-    image: "/images/header-img-2.jpg",
+    image: "/images/product_location.svg",
     title: "Aldo",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
   },
   {
     key: 2,
-    image: "/images/header-img-2.jpg",
+    image: "/images/product_shopping.svg",
     title: "Estupendo",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
   },
   {
     key: 3,
-    image: "/images/header-img-2.jpg",
+    image: "/images/product_holding.svg",
     title: "Medio",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
   },
   {
     key: 4,
-    image: "/images/header-img-2.jpg",
+    image: "/images/product_service.svg",
     title: "Carga",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
   },
@@ -29,10 +29,10 @@ const services = [
 
 export default function Service() {
   return (
-    <div className="mt-24 mb-28">
+    <div className="mt-36 mb-28">
       {services.map((service) =>
         service.key % 2 === 1 ? (
-          <div className="flex justify-between items-center text-left px-28 mt-20">
+          <div className="flex justify-between items-center text-left px-28 mt-28">
             <div className="block">
               <h1 className="text-5xl text-dark-grey font-bold">
                 {service.title}
@@ -41,18 +41,16 @@ export default function Service() {
             </div>
             <img
               src={service.image}
-              width={623}
-              height={400}
+              width={500}
               className="rounded-img"
               alt=""
             />
           </div>
         ) : (
-          <div className="flex justify-between items-center text-right px-28 mt-20">
+          <div className="flex justify-between items-center text-right px-28 mt-28">
             <img
               src={service.image}
-              width={623}
-              height={400}
+              width={500}
               className="rounded-img"
               alt=""
             />

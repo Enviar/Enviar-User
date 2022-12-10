@@ -20,6 +20,7 @@ export default function Header({ currentPage }) {
         </p>
       </div>
       <img
+        alt=""
         src={
           currentPage === "services"
             ? "/images/ontheway.svg"
