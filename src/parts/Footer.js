@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="footer flex justify-between px-24 pt-12 pb-16 font-semibold text-left max-w-screen-2xl bg-white">
+    <footer className="w-full footer flex justify-between px-24 pt-12 pb-16 font-semibold text-left bg-white">
       <div className="logo-trademark text-left">
         <img src="/images/enviar-logo.png" alt="" width={176} />
         <p className="font-semibold text-lg mt-16">
-          &#169; TRAVA. All Rights Reserved
+          &#169; ENVIAR. All Rights Reserved
         </p>
       </div>
       <div className="visit-us">

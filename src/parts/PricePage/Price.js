@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import DatalistInput from "react-datalist-input";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 
 export default function Price() {
   const [city, setCity] = useState([]);
@@ -9,6 +10,7 @@ export default function Price() {
   const [destination, setDestination] = useState(0);
   const [weight, setWeight] = useState(0);
   const [output, setOutput] = useState(0);
+  const [exist, isExist] = useState("render");
   // const
   const getCity = async () => {
     try {
@@ -36,6 +38,9 @@ export default function Price() {
     // console.log(destination);
     // console.log(weight);
     try {
+      if (!origin || !destination || !weight) {
+        return Swal.fire("Error", `Please fill all field`, "error");
+      }
       const response = await axios.post(
         "https://enviar-be.herokuapp.com/checkPrice",
         {
@@ -46,12 +51,15 @@ export default function Price() {
       );
       console.log(response.data.data);
       setOutput(response.data.data);
+      isExist("finished");
     } catch (err) {
       console.log(err);
+      isExist("error");
     }
   };
   useEffect(() => {
     getCity();
+    console.log(exist);
   }, []);
   if (city) {
     return (
@@ -127,7 +135,7 @@ export default function Price() {
             </button>
           </div>
           <div className="mt-4">
-            {output.regular > 0 ? (
+            {output.regular > 0 && exist === "finished" ? (
               <div className="font-semibold">
                 <h3 className="text-xl text-left mb-4">Price Estimation:</h3>
                 <ul className="bg-primary-green h-field text-white flex justify-around items-center rounded-t-lg">
@@ -157,34 +165,10 @@ export default function Price() {
                     <li className="pt-3">{output.extra}</li>
                   </ul>
                 </div>
-                {/* <table className="text-left mx-auto">
-                  <tbody className="px-16 flex-col justify">
-                    <tr className="m-12">
-                      <td className="w-1/3 px-17">Aldo</td>
-                      <td className="w-1/3">{weight}</td>
-                      <td className="w-1/3">{output.regular}</td>
-                    </tr>
-                    <tr>
-                      <td className="text-center">Estupendo</td>
-                      <td>{weight}</td>
-                      <td>{output.extra}</td>
-                    </tr>
-                    <tr>
-                      <td>Medio</td>
-                      <td>{weight}</td>
-                      <td>{output.regular}</td>
-                    </tr>
-                    <tr>
-                      <td>Carga</td>
-                      <td>{weight}</td>
-                      <td>{output.extra}</td>
-                    </tr>
-                  </tbody>
-                </table> */}
               </div>
-            ) : (
+            ) : exist === "error" ? (
               <p>Service for the selected area is currently unavailable</p>
-            )}
+            ) : null}
           </div>
         </div>
       </>

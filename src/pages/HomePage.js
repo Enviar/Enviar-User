@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import Footer from "../parts/Footer";
 import Header from "../parts/HomePage/Header";
 import TrackPackage from "../parts/HomePage/TrackPackage";
-import Footer from "../parts/Footer";
 
 export default function HomePage() {
   return (
