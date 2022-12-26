@@ -32,7 +32,10 @@ export default function Service() {
     <div className="mt-36 mb-28">
       {services.map((service) =>
         service.key % 2 === 1 ? (
-          <div className="flex justify-between items-center text-left px-28 mt-28">
+          <div
+            className="flex justify-between items-center text-left px-28 mt-28"
+            key={service.key}
+          >
             <div className="block">
               <h1 className="text-5xl text-dark-grey font-bold">
                 {service.title}
@@ -40,6 +43,7 @@ export default function Service() {
               <p className="mt-4 w-9/12 text-xl">{service.text}</p>
             </div>
             <img
+              data-testid="service-img"
               src={service.image}
               width={500}
               className="rounded-img"
@@ -47,7 +51,10 @@ export default function Service() {
             />
           </div>
         ) : (
-          <div className="flex justify-between items-center text-right px-28 mt-28">
+          <div
+            className="flex justify-between items-center text-right px-28 mt-28"
+            key={service.key}
+          >
             <img
               src={service.image}
               width={500}

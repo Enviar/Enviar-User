@@ -4,14 +4,14 @@ export default function Header({ currentPage }) {
   return (
     <div className="flex justify-between bg-white h-header px-28 pt-14">
       <div className="block text-dark-grey text-left">
-        <h1 className="font-semibold text-6xl pt-11">
+        <h1 className="font-semibold text-6xl pt-11" data-testid="header-title">
           {currentPage === "services"
             ? "Our Services"
             : currentPage === "about"
             ? "About Us"
             : "Prices"}
         </h1>
-        <p className="text-2xl font-medium">
+        <p className="text-2xl font-medium" data-testid="header-desc">
           {currentPage === "services"
             ? "Any kinds of services for any types of packages"
             : currentPage === "about"

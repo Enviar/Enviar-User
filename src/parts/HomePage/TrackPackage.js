@@ -106,7 +106,7 @@ export default function TrackPackage() {
     <>
       <div className="tracking py-72">
         <div className="tracking-form">
-          <h1 className="text-2xl font-semibold">
+          <h1 className="text-2xl font-semibold" data-testid="track-title">
             Your Package is Safe With Us, <br /> Let’s Track It!
           </h1>
 
