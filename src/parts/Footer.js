@@ -12,7 +12,11 @@ export default function Footer() {
       </div>
       <div className="visit-us">
         <h3 className="text-lg text-primary-green">Visit Us</h3>
-        <Link to="" className="mt-2 flex items-start">
+        <Link
+          to=""
+          className="mt-2 flex items-start"
+          data-testid="address-link"
+        >
           <img src="/images/location.svg" alt="" className="mr-1 mt-0.5" />
           Jl. Diponegoro No. 22, <br />
           Citarum, Kec. Bandung <br />
@@ -22,7 +26,7 @@ export default function Footer() {
       </div>
       <div className="business">
         <h3 className="text-lg text-primary-green">Business Inquiries</h3>
-        <Link to="" className="mt-2 flex items-start">
+        <Link to="" className="mt-2 flex items-start" data-testid="email-link">
           <img src="/images/email.svg" alt="" className="mr-1.5 mt-1" />
           enviar@shipping.com
         </Link>

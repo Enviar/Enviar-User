@@ -7,7 +7,7 @@ export default function Button({ btn_text, btn_destination }) {
       <Link
         className="px-9 py-3 tracking-wide bg-black font-normal text-base text-white rounded-lg hover:duration-100 hover:bg-primary-green"
         to={btn_destination}
-        data-testid="jumbo-btn"
+        data-testid="btn-nav"
       >
         {btn_text}
       </Link>

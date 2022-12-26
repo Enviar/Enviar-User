@@ -32,6 +32,7 @@ export default function Navbar() {
         {links.map((link) => {
           return (
             <NavLink
+              data-testid="nav-link"
               key={link.key}
               to={link.url}
               className="pr-6 pl-6 hover:px-6 pb-3 pt-4 hover:bg-btn-hover duration-200 hover:rounded-md"

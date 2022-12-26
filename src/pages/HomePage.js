@@ -6,7 +6,7 @@ import TrackPackage from "../parts/HomePage/TrackPackage";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header data-testid="header-page" />
       <TrackPackage />
       <Footer />
     </>
