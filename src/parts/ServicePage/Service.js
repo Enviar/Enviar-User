@@ -5,25 +5,25 @@ const services = [
     key: 1,
     image: "/images/product_location.svg",
     title: "Aldo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
+    text: "Sign up for our regular package service and never worry about missed deliveries or inconvenient pickup times again, as we'll handle the rest and deliver your packages to your doorstep on the schedule you choose.",
   },
   {
     key: 2,
     image: "/images/product_shopping.svg",
     title: "Estupendo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
+    text: "Experience the convenience and reliability of our great package service, where your packages are expertly handled and delivered to you with care and efficiency",
   },
   {
     key: 3,
     image: "/images/product_holding.svg",
     title: "Medio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
+    text: "With our medium package service, you can expect timely and efficient delivery of your packages, along with a range of additional benefits and options to suit your needs.",
   },
   {
     key: 4,
     image: "/images/product_service.svg",
     title: "Carga",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat nisl non justo molestie lobortis. Mauris mattis libero sit amet convallis porttitor. Proin aliquet, nisl.        ",
+    text: "Trust us to handle all of your cargo shipping needs with our reliable and efficient package service, featuring competitive rates and a range of options to meet your specific requirements.",
   },
 ];
 
